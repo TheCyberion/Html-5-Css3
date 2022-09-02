@@ -1,0 +1,55 @@
+/*
+1er - ESSAIE DAPPLIQUER MIXIN
+2em - ESSAIE DAPPLIQUER TABLEAU
+3EME - ESSAIE DAPPLIQUER VARIABLES
+4EME - FONCTIONS ET BOUCLES
+*/
+
+body{
+    display: flex;
+    flex-direction: column;
+
+}
+.contneur_P1{
+    display: flex;
+    flex-direction: row;
+}
+.contneur_P{
+    display: flex;
+    flex-direction: row;
+}
+.conteneur_div{
+    display: flex;
+}
+
+.RECT1{
+    height: 100px;
+    width:100px;
+    background-color: aqua;
+    margin: 10px;
+}
+.RECT2{
+    height: 100px;
+    width:100px;
+    background-color: aqua;
+    margin: 10px;
+}
+
+.RECT3{
+    height: 100px;
+    width:100px;
+    background-color: aqua;
+    margin: 10px;
+}
+.RECT4{
+    height: 100px;
+    width:100px;
+    background-color: aqua;
+    margin: 10px;
+}
+.RECT5{
+    height: 100px;
+    width:100px;
+    background-color: aqua;
+    margin: 10px;
+}

@@ -1,0 +1,77 @@
+////EXO 1
+@for $i from 1 through 4 {
+    .col-#{$i}{
+        width: 25%* $i;
+    }
+}
+
+
+///exo2
+@mixin createur_des_collonnes ($nb) {
+
+    @for $i from 1 through $nb {
+        .col-#{$i}{
+            width: 25%* $i;
+        }
+    }
+    
+}
+
+@include createur_des_collonnes(5);
+
+///exo3
+
+
+/*
+
+1er : banane ,cerise,annans ,pomme se trouve
+dans tab de question 03 donc il faut utiliser le tableau
+dans la boucle
+nth(nom_tableau , $i) ---> Element du tableau
+indice : on peut changer
+
+2eme : $i qui change dans boucle for
+***/
+ /***taille = 4***/
+  /**    1        2       3       4**/
+$tab : (banane, cerise, ananas, pomme);
+@for $i from 1 through 4 {
+   $x:nth($tab,$i);
+   .fruits-#{$x}{
+       width: 50%;
+   }
+}
+
+
+@mixin mixin_liste($tableau_fruit) {
+    @for $i from 1 through 4 {
+        $x:nth($tableau_fruit,$i);
+        .fruits-#{$x}{
+            width: 50%;
+        }
+     }
+}
+
+@include mixin_liste($tab);
+
+
+@function example(){
+
+    @return nth($tab, length($tab));
+
+}
+/**POUR TESTEZ**/
+
+$x:example();
+/*SI ON A QLQ CHOSE QUI RETOURNE UNE VALEUR ON STOCKE LA VALEUR DANS UN VARIABLE**/
+
+.fruits-#{$x}{
+    width: 50%;
+}
+
+
+/*****************************/
+
+body{
+    background-color: lighten(grey,50% ) ;
+}

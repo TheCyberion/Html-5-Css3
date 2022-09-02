@@ -1,0 +1,113 @@
+
+/*
+1er - ESSAIE DAPPLIQUER MIXIN
+2em - ESSAIE DAPPLIQUER TABLEAU
+3EME - ESSAIE DAPPLIQUER VARIABLES
+4EME - FONCTIONS ET BOUCLES
+*/
+
+body{
+    display: flex;
+    flex-direction: column;
+
+}
+.contneur_P1{
+    display: flex;
+    flex-direction: row;
+}
+.contneur_P{
+    display: flex;
+    flex-direction: row;
+}
+.conteneur_div{
+    display: flex;
+}
+
+.RECT1{
+    height: 100px;
+    width:100px;
+    background-color: aqua;
+    margin: 10px;
+}
+.RECT2{
+    height: 100px;
+    width:100px;
+    background-color: aqua;
+    margin: 10px;
+}
+
+.RECT3{
+    height: 100px;
+    width:100px;
+    background-color: aqua;
+    margin: 10px;
+}
+.RECT4{
+    height: 100px;
+    width:100px;
+    background-color: aqua;
+    margin: 10px;
+}
+.RECT5{
+    height: 100px;
+    width:100px;
+    background-color: aqua;
+    margin: 10px;
+}
+//Essai1 Mixin
+@mixin rectangle{
+    height:100px;
+    width:100px;
+    background-color:aqua;
+    margin:10px;
+}
+
+
+
+body{
+    @include Flex(column)
+
+}
+.contneur_P1{
+   @include Flex(row);
+}
+.contneur_P{
+    @include Flex(row);
+}
+.conteneur_div{
+    display: flex;
+}
+
+.RECT1{
+    @include rectangle;
+}
+.RECT2{
+    @include rectangle;
+}
+.RECT3{
+    @include rectangle;
+}
+.RECT4{
+    @include rectangle;
+}
+.RECT5{
+    @include rectangle;
+}
+//
+
+//Essai2
+body{
+    display:grid;
+    grid-template-areas:
+    "P1 P2 P3 P4 P5
+    RECT1 RECT2 RECT3 RECT4 RECT5"
+
+}
+.conteneur_P1{
+  grid-area: P1 P3;
+}
+.conteneur_P{
+    grid-area:P4 P5;
+}
+
+//Essai3

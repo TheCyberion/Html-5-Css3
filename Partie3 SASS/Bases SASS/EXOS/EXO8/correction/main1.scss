@@ -1,0 +1,39 @@
+@mixin intialisation($postion,$width,$heigh,$background) {
+    position: $postion;
+    width:$width;
+    height: $heigh;
+    background-color:$background;
+}
+.container_enfant {
+    @include intialisation(relative,500px,500px ,aqua )
+
+}
+.rect{
+    @include intialisation(absolute,50px,50px , rgb(235, 193, 193) );
+}
+@mixin top_left($valeur) {
+    @if($valeur == 1){
+        top: 0px;
+        left: 0px;
+    }
+    @if($valeur == 2){
+        bottom: 0px;
+        left: 0px;
+    }
+    @if($valeur == 3){
+        top: 0px;
+        right: 0px;
+    }
+    @if($valeur == 4){
+        bottom: 0px;
+        right: 0px;
+    }
+    
+}
+
+@for $i from 1 through 4 {
+    .enfant#{$i}{
+        @include top_left($i);
+    }
+}
+

@@ -1,0 +1,48 @@
+*{margin:0px;
+padding:0px}
+.body{background-color: white;}
+
+.container_enfant .rect{
+    position:absolute;
+    width:500px;
+    height:500px;
+    background-color: #ebc1c1;
+}
+.rect{
+    @include initialisation(absolute,50px,50px)
+}
+@mixin top_left($valeur){
+    @if($valeur==1){
+        top:0px;
+        left:0px;
+    }
+    @if($valeur==2){
+        bottom:0px;
+        left:0px;
+    }
+}
+.enfant1_rect{
+    
+   top: 0px;
+    left:0px;
+}
+
+.enfant2_rect{
+    
+   top: 0px;
+    right:0px;
+}
+
+.enfant3_rect{
+    
+    margin-bottom: 0;
+    margin-left:0;
+}
+
+
+.enfant4_rect{
+    
+    margin-bottom: 0;
+    margin-right:0;
+}
+

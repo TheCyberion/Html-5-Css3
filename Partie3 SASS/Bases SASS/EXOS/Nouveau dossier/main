@@ -1,0 +1,24 @@
+////EXO 1
+@for $i from 1 through 4 {
+    .col-#{$i}{
+        width: 25%* $i;
+    }
+}
+
+
+///exo2
+@mixin createur_des_collonnes ($nb) {
+
+    @for $i from 1 through $nb {
+        .col-#{$i}{
+            width: 25%* $i;
+        }
+    }
+    
+}
+
+@include createur_des_collonnes(5);
+
+///exo3
+
+$tab : (banane, cerise, ananas, pomme);

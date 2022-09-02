@@ -1,0 +1,48 @@
+.grid-container{
+    display:grid;
+    grid-template-areas:
+    "header header header"
+    "item2 item3 item4"
+    "footer footer footer"
+    ;
+}
+.products{grid-area:header;
+    background-color:violet;
+    padding:10px;
+    display:flex;
+
+}
+
+.child1{
+    margin:2px;
+    padding:2px;
+    border:1px solid black
+    
+}
+.child2{
+    margin:2px;
+    padding:2px;
+    border:1px solid black
+}
+.child3{
+    margin:2px;
+    padding:2px;
+    border:1px solid black
+}
+.menu{
+    grid-area: item2;
+}
+ul li{background-color: aqua;
+margin:5px;
+padding:10px;
+list-style:none;}
+
+ul{ width:100px;
+margin:auto}
+.item3{
+    grid-area: item3;
+}
+.item4{
+    grid-area: item4;
+    background-color:aqua;
+}

@@ -1,0 +1,42 @@
+
+
+  
+  
+  /* Background Styles Only */
+  
+  @import url('https://fonts.googleapis.com/css?family=Raleway');
+  
+  * {
+    font-family: Raleway;
+  }
+  
+  body {
+    background-color: #DFDFDF;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  html {
+    height: 300%;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  
+  .list-content {
+    padding: 10px 20px;
+  }
+  
+  .list-header {
+    background-color: #333;
+    color: #00FF6C;
+    padding: 10px;
+    font-weight: bold;
+    position: sticky;
+    top: 0px
+  }
+  
+ 

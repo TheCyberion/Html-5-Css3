@@ -1,0 +1,19 @@
+.products{
+    display:flex;
+    justify-content:center;
+    text-align: center;
+    flex-wrap: wrap
+}
+
+.child1{
+    margin:2px;
+    border: solid black 1PX
+}
+.child2{
+    margin:2px;
+    border: solid black 1PX
+}
+.child3{
+    margin:2px;
+    border: solid black 1PX
+}

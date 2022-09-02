@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container_enfant {
+    position: relative;
+    width:500px;
+    height: 500px;
+    background-color: aqua;
+    .rect{
+        position: absolute;
+        width:50px;
+        height: 50px;
+        background-color: rgb(235, 193, 193);
+       
+    }
+    .enfant1{
+        top: 0px;
+    }
+    /*SI VOUS AVEZ 2 SELECTEURS DANS MM PARENT SELECTEUR
+        et si vous voulez copier le mm code dun frere a un autre
+        on utilise @EXETEND
+    **/
+    .enfant2{
+        bottom: 0px;
+        margin: 5px;
+    }
+    
+    .enfant3{
+        right: 0px;
+    }
+    .enfant4{
+      @extend .enfant2;
+       @extend .enfant3;
+       margin: 10px;
+    }
+}
+
+

@@ -1,0 +1,49 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.body {
+  background-color: white;
+}
+
+.container_enfant {
+  width: 500px;
+  height: 500px;
+  background-color: aqua;
+}
+
+.enfant1_rect {
+  display: flex;
+  border: 2px solid blue;
+  background-color: rgb(234, 68, 176);
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 0px;
+}
+
+.enfant2_rect {
+  border: 2px solid blue;
+  background-color: rgb(234, 68, 176);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.enfant3_rect {
+  border: 2px solid blue;
+  background-color: rgb(234, 68, 176);
+  position: absolute;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.enfant4_rect {
+  border: 2px solid blue;
+  background-color: rgb(234, 68, 176);
+  position: absolute;
+  margin-bottom: 0;
+  margin-right: 0;
+}/*# sourceMappingURL=main.css.map */

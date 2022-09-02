@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+:root{
+    font-size: 16px;
+}
+
+p{
+    text-align: center; 
+   /*Pour centrer img**/
+   /**SEULE CONDITION:
+    <p>
+        <img></img>
+    </p>
+    **/
+}
+/*
+    margin:auto ca marche seulement si on fixe
+    widths
+***/
+p{
+   
+    width: 200px;
+    margin: auto;
+}

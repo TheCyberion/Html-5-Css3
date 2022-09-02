@@ -1,0 +1,11 @@
+body{
+    display:flex;
+}
+p{
+    color:red;
+}
+@media (max-width: 900px) {
+    p{
+        color:rgb(0,4,255);
+    }
+}

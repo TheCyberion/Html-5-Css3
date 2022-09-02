@@ -1,0 +1,36 @@
+$couleur: rgb(255,0,221);
+
+$tab : (10px,20px,5px,10px);
+
+$maps:(top:10px,
+    left:5px,
+    3:aqua);
+body{
+    background-color: $couleur;
+    margin:2px;
+
+    padding-top: nth($tab,1);
+    padding-bottom: nth($tab,2);
+    padding-left: nth($tab,3);
+    padding-right:nth($tab,4);
+}
+@mixin MIXIN_POUR_FLEX{
+    display:flex;
+    flex-direction:row;
+}
+body{
+background-color: $couleur;
+margin: map-get($maps,top);
+
+padding-top: nth($tab,1);
+padding-bottom: nth($tab,2);
+    padding-left: nth($tab,3);
+    padding-right:nth($tab,4);}
+
+    .A{
+        @include MIXIN_POUR_FLEX;
+    }
+    .B{
+
+        @include MIXIN_POUR_FLEX;
+    }

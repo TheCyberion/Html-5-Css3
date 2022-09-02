@@ -1,0 +1,27 @@
+body {
+  background-color: rgb(255, 0, 221);
+  margin: 2px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+body {
+  background-color: rgb(255, 0, 221);
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+.A {
+  display: flex;
+  flex-direction: row;
+}
+
+.B {
+  display: flex;
+  flex-direction: row;
+}/*# sourceMappingURL=main.css.map */

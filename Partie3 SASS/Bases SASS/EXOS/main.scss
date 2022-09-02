@@ -1,0 +1,83 @@
+//Exo1
+@for $i from 1 through 4{
+    .col-#{$i}{
+        width:25%*$i
+    }
+}
+
+//Exo2
+
+@mixin createur_des_colones ($nb) {
+     @for $i from 1 through $nb{
+        .col-#{$i}{
+            width: 25%* $i;
+        }
+    }
+} 
+
+//Exo3
+$tab: (banane,cerise,ananas,pomme);
+
+    
+//Exo4
+$x : nth($tab, 1 );
+.col-#{$x}{
+    margin:2px
+}
+$x : nth($tab, 2 );
+.col-#{$x}{
+    margin:2px
+}
+$x : nth($tab, 3 );
+.col-#{$x}{
+    margin:2px
+}
+$x : nth($tab, 4 );
+.col-#{$x}{
+    margin:2px
+}
+$n:nth($tab,$i);
+.fruits-#{$x}{
+    width:50px
+}
+
+
+//Exo5
+$tab : (banane, cerise, ananas, pomme);
+@mixin createur_de_classes ($fruits) {
+    @for $i from 1 through 4 {
+        $n:nth($tab,$i);
+        .fruits-#{$x}{
+            width:50px;
+        }
+    }
+}
+@include mixin_liste($tab);
+@return: nth($tab, length($tab));
+
+
+//Exo6
+
+@function renvoyer_dernier_fruit ($fruits){
+@return $tab nth($fruit,length($fruit));
+@include $tab mixin_liste($tab)
+}
+
+@function example(){
+
+    @return nth($tab, length($tab));
+
+}
+//Exo7
+
+$social:(facebook,flickr,linkedin,twitter,vimeo,youtube);
+$contenant:(#3b5998, #0063db, #007bb6, #00aced, #aad450, #bb0000);
+
+@for $i from 1 through 6{
+    $x1:nth($social,$i);
+    $x2: nth($contenant,$i);
+    .social-#{$x1}{
+        color: $x2;
+        background-color: lighten ($x2,10%);
+    }
+}

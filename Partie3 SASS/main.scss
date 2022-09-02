@@ -1,0 +1,122 @@
+$couleur: rgb(255,0,221);
+
+$tab : (10px,20px,5px,10px);
+
+$maps:(top:10px,
+    left:5px,
+    3:aqua);
+body{
+    background-color: $couleur;
+    margin:2px;
+
+    padding-top: nth($tab,1);
+    padding-bottom: nth($tab,2);
+    padding-left: nth($tab,3);
+    padding-right:nth($tab,4);
+}
+@mixin MIXIN_POUR_FLEX{
+    display:flex;
+    flex-direction:row;
+}
+body{
+background-color: $couleur;
+margin: map-get($maps,top);
+
+padding-top: nth($tab,1);
+padding-bottom: nth($tab,2);
+    padding-left: nth($tab,3);
+    padding-right:nth($tab,4);}
+
+    .A{
+        @include MIXIN_POUR_FLEX;
+    }
+    .B{ @include MIXIN_POUR_FLEX(row);
+
+        @include MIXIN_POUR_FLEX;
+    }
+    /*
+SCSS est 100% Compatible avec navigateurs
+CSS est 90% Compatible avec navigateurs
+
+
+SCSS ---> COMPILATEUR SASS LIVE ---> CSS 100% COMPATIBLE AVEC NAVIGATEUR
+**/
+/*
+varible scss =  $ + nom_variable : valeur
+**/
+/***********************************STOCKAGE***************************************************************/
+///////////////////////////////////////////////////////////////////
+/****  VARIABLES ******/
+$couleur : rgb(255, 0, 221);/**DECLARATION VARIABLE**/
+/****  TABLEAUX ******/
+/* DANS JAVASCRIPT  var tab = [1,2,3,4,5,6,7,8]**/
+/****** DANS SCSSS   $tab  : (1,2,3,4,5,6,7,8); **/
+/***indices:  1      2      3     4**/
+$tab : (10px , 20px , 5px ,10px);/**DECLARATION TABLEAU**/
+/* SI VOUS AVEZ MM PROPRIETE MAIS AVEC DES VALEURS DIFFRENTS ON UTILISE LES TABLEAUX**/
+/****  MAPS ******/
+
+$maps:( /*DECLARATION MAPS**/
+    /*indice:valeur**/
+    top:10px,
+    left:5px,
+    3:aqua,
+);
+
+@mixin MIXIN_POUR_FLEX( $direction ) { /*DECLARATION DE MIXIN**/
+    display: flex;
+    flex-direction: $direction;
+
+}
+/***********************************STOCKAGE********************************************************/
+/***********************************Manipulation********************************************************/
+/**FONCTIONS ET BOUCLES ET CONDITIONS*/
+/**OPERATIONS SUR LES DONNES ===> FONCTIONS**/
+@function calculer($x){ /* function caculer(x)***/
+    /**y =  x+ 1*/
+    $y : 0;
+    @if($x == 0){
+     /**x = 2 , x:2**/
+        $y : $x + 1;
+        $y : $y *2;
+    }@else{
+        $y : $y *2;
+    }
+
+    /** return y */
+    @return $y;
+}
+
+    
+        /* INTERPOLATION :  CONCATENER UN CODE
+            CSS AVEC UN VARIABLE SCSS POUR LE BUT
+            DE RECUPERER LA VALEUR DU VARIABLE SCSS**/
+/*A CHAQUE FOIS VOUS UTILISER UNE BOUCLE FOR IL FAUT AJOUTER UN CODE CSS  DEDANS**/
+@for $i from 1 through 3 {
+    .child#{$i}{
+        margin: 2px;
+        }
+}
+
+
+body{
+   background-color: $couleur; /*APPEL DE VARIBLE**/
+   margin: map-get( $maps, top );
+   /*nth : pour récuperer les elements d'un tableau 
+    nth( nom_tableau , indice)
+   **/
+   font-weight: calculer(6px);
+
+   padding-top: nth($tab,1); /*APPEL DE TABLEAU**/
+   padding-bottom: nth($tab,2); /*APPEL DE TABLEAU**/
+   padding-left: nth($tab,3); /*APPEL DE TABLEAU**/
+   padding-right:nth($tab,4); /*APPEL DE TABLEAU**/
+}
+.A{
+  @include MIXIN_POUR_FLEX(column);
+    
+}
+.B{
+    @include MIXIN_POUR_FLEX(row);
+    
+}

@@ -1,0 +1,66 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+header{
+
+
+ height:300px;
+ background-image: url(./NYC\ Sky.jpg);
+ background-size: cover;    
+}
+p{text-align:center}
+.circle{
+    position: absolute;
+    right: 45%;
+    margin-top:10px;
+    background-color: peachpuff;
+    height:200px;
+    width:200px;
+    border-radius:100%;
+}
+.circle-text{
+
+    position:absolute;
+    top:20%;
+    text-align: center;
+    color:white
+
+}
+.main-nav{
+    height:80px;
+    background-color: peachpuff;
+    position: sticky;
+    padding:20px;
+    top:0px;
+}
+li:hover{
+
+    color:rgb (228,165,19);
+    background-color: white
+}
+ul li{
+    display:inline;
+    justify-content:space-around;
+    position:sticky;
+    background-color: rgb(228, 165, 19);
+    color:white;
+    padding-top:15px;
+}    
+section{
+    text-align: center;
+}    
+.content-cropper-text{
+   width:150px;
+   white-space:nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis
+
+
+}
+.UL-wrapper{
+
+    background-color:rgb(190, 63, 110);
+    margin: auto;
+}
